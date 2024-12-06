@@ -37,15 +37,15 @@ drive.mount('/content/drive')
 import zipfile
 
 # Step 2: Specify the path to the zip file in Google Drive
-#zip_file_path = '/content/drive/MyDrive/Brain Tumor Data Set/archive(1).zip'
-#extract_dir = '/content/drive/MyDrive/Brain Tumor Data Set'
+zip_file_path = '/content/drive/MyDrive/Brain Tumor Data Set/archive(1).zip'
+extract_dir = '/content/drive/MyDrive/Brain Tumor Data Set'
 
 # Ensure the extract directory exists
-#os.makedirs(extract_dir, exist_ok=True)
+os.makedirs(extract_dir, exist_ok=True)
 
 # Step 3: Unzip the file
-#with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
- #   zip_ref.extractall(extract_dir)
+with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
+zip_ref.extractall(extract_dir)
 
 os.listdir("/content/drive/MyDrive/Brain Tumor Data Set")
 
